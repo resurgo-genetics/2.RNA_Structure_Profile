@@ -83,13 +83,14 @@ right.add(ehr_embedding_layer)
 
 model = Sequential()
 model.add(Merge([left, right], mode='concat'))
-model.add(Bidirectional(LSTM(2,return_sequences=False)))
-model.add(Dense(32))
+model.add(Bidirectional(LSTM(2,return_sequences=True)))
+model.add(Dense(64))
+model.add(Dense(16))
 model.add(Dense(2, activation='softmax',activity_regularizer= ActivityRegularizer(l2=0.005)))
 model.compile(loss='mse', optimizer='rmsprop',metrics=['acc'])
 model.summary()
 
-model.fit([x_train, x_train_ehr], y_train, batch_size=128, nb_epoch=20, validation_data=([x_valid, x_valid_ehr], y_valid))
+model.fit([x_train, x_train_ehr], y_train, batch_size=128, nb_epoch=100, validation_data=([x_valid, x_valid_ehr], y_valid))
 
 print 'finish!'
 
