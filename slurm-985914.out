@@ -1,0 +1,8 @@
+/var/spool/slurmd/job985914/slurm_script:行3: SBATCH: 未找到命令
+/var/spool/slurmd/job985914/slurm_script:行5: SBATCH: 未找到命令
+/var/spool/slurmd/job985914/slurm_script:行6: SBATCH: 未找到命令
+/var/spool/slurmd/job985914/slurm_script:行7: SBATCH: 未找到命令
+/var/spool/slurmd/job985914/slurm_script:行8: SBATCH: 未找到命令
+/var/spool/slurmd/job985914/slurm_script:行9: SBATCH: 未找到命令
+/var/spool/slurmd/job985914/slurm_script:行10: SBATCH: 未找到命令
+slurmstepd: error: *** JOB 985914 ON n01 CANCELLED AT 2017-03-28T17:59:43 ***
